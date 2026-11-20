@@ -52,8 +52,8 @@ if(!$find || !password_verify($password, $find['password_hash'])){
 send_error(401, 'INVALID_CREDENTIALS');
 }
 session_regenerate_id(true);
-$_SESSION['user_id'] = (int) $user['id'];
-$_SESSION['username'] = $user['username'];
+$_SESSION['user_id'] = (int) $find['id'];
+$_SESSION['username'] = $find['username'];
 send_json(200, ['id' => (int) $find['id'], 'username' => $find['username'], 'is_admin' => (int) $find['is_admin'], 'token' => session_id()]);
 } 
 
