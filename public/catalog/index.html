@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Campus Marketplace</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="error-banner" class="error-banner" role="alert"></div>
+
+        <h2>Product Catalog</h2>
+
+        <form id="search-form">
+            <label for="search">Search:</label>
+            <input type="text" id="search" name="q">
+
+            <label for="category">Category:</label>
+            <select id="category" name="category_id">
+                <option value="">All Categories</option>
+            </select>
+
+            <button type="submit">Search</button>
+        </form>
+
+        <h2>Products</h2>
+        <div id="catalog-products" class="products"></div>
+
+        <h2>Product Details</h2>
+        <div id="product-details"></div>
+    </main>
+
+    <script src="../app.js"></script>
+    <script src="catalog.js"></script>
+
+</body>
+</html>
